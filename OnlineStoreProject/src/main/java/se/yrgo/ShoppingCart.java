@@ -31,6 +31,11 @@ public class ShoppingCart {
             System.out.println(product);
         }
     }
+
+    public List<Product> getShoppingCart() {
+        return shoppingCart;
+    }
+
     @Override
     public String toString() { return "Shopping Cart: " + shoppingCart;
     }
