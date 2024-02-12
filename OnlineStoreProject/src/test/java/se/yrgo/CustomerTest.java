@@ -6,6 +6,11 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class CustomerTest {
+    /**
+     * Test to see if order history works
+     * if you have 0 items in your history the first assertEquals will be true
+     * if you have added items the second assertEquals will be true.
+     */
     @Test
     public void orderHistoryTest() {
         Customer customer = new Customer(1,

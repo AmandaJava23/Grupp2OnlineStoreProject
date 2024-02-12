@@ -24,6 +24,11 @@ public class Customer {
         return email;
     }
 
+    /**
+     * all prodcuts are put into the orderHistroy list and can be shown here using
+     * this method.
+     * @return a formatted string with all the information
+     */
     public String orderHistory(){
         if(orderHistory.isEmpty()){
             return "No history to be shown";
@@ -31,6 +36,14 @@ public class Customer {
         return String.format("Order History: %nName: %s%nEmail: %s%n" +
                 "Items: %s&n",name,email,orderHistory);
     }
+
+    /**
+     * Method for placing orders.
+     * add a Product into a list.
+     *
+     * @param product
+     * @throws IllegalArgumentException
+     */
     public void placeOrder(Product product) throws IllegalArgumentException  {
         if(product == null){
             throw new IllegalArgumentException("Product doens't exist!");
