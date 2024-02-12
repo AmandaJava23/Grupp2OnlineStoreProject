@@ -3,6 +3,7 @@ package se.yrgo;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class CustomerTest {
     @Test
@@ -22,5 +23,6 @@ public class CustomerTest {
         Product product = new Product();
         customer.placeOrder(product);
         assertEquals(1,customer.orderHistory.size());
+        assertThrows(IllegalArgumentException.class, ()-> customer.placeOrder(null));
     }
 }

@@ -31,7 +31,10 @@ public class Customer {
         return String.format("Order History: %nName: %s%nEmail: %s%n" +
                 "Items: %s&n",name,email,orderHistory);
     }
-    public void placeOrder(Product product){
+    public void placeOrder(Product product) throws IllegalArgumentException  {
+        if(product == null){
+            throw new IllegalArgumentException("Product doens't exist!");
+        }
         orderHistory.add(product);
     }
 }
